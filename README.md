@@ -1,3 +1,26 @@
+# Respostas das perguntas
+
+1. Uma API REST é um conjunto de regras que permite a comunicação e a troca de dados entre diferentes aplicações utilizando o protocolo HTTP de forma padronizada. Os 4 métodos HTTP usados no CRUD são: GET (usado para buscar e ler as informações dos clientes), POST (usado para criar e cadastrar um novo cliente), PUT (usado para atualizar ou editar os dados de um cliente existente) e DELETE (usado para apagar ou remover um cliente do sistema).
+
+2. A diferença é que o localStorage guarda os dados apenas no navegador daquele usuário específico, o que significa que os dados somem se ele limpar o histórico ou mudar de dispositivo. Já o banco de dados no servidor, como o SQLite, armazena os dados de forma centralizada e permanente no servidor, permitindo que qualquer usuário autorizado acesse as mesmas informações de qualquer lugar de forma segura.
+
+3. Significa que o campo id_cliente é o identificador único e exclusivo de cada cliente na tabela (PRIMARY KEY), garantindo que nenhum cliente tenha o mesmo ID que outro. O termo AUTOINCREMENT indica que o próprio banco de dados vai gerar esse número de forma automática e sequencial (1, 2, 3...) toda vez que um novo cadastro for feito.
+
+4. A restrição NOT NULL indica que o preenchimento daquele campo é obrigatório e o banco não aceitará o cadastro se ele for enviado em branco. Os campos raca e cor não possuem essa restrição porque são considerados dados opcionais no sistema, permitindo que o cliente escolha não declarar essa informação ou que o cadastro seja feito mesmo sem esse detalhe.
+
+5. O comando SQL usado para buscar todos os registros é: SELECT * FROM clientes;
+O comando SQL usado para apagar um registro específico é: DELETE FROM clientes WHERE id_cliente = valor;
+
+6. O uso do ? serve para criar parâmetros seguros na consulta (chamados de Prepared Statements), fazendo com que o banco trate o que o usuário digitou puramente como texto e não como código. Isso evita o ataque de SQL Injection, que acontece quando um invasor tenta digitar comandos SQL nos campos do formulário para roubar dados ou destruir o banco.
+
+
+7. Deve aparecer uma lista com os dados dos clientes formatados em JSON (um formato de texto estruturado com chaves e valores) ou um par de colchetes vazio [ ] caso não exista nenhum cliente cadastrado. Isso acontece porque o navegador faz uma requisição do tipo GET por padrão ao acessar um link, ativando a rota da API que foi programada para buscar e devolver todos os registros da tabela de clientes.
+
+
+
+
+
+
 # Petshop — projeto de Fundamentos de Desenvolvimento para Internet
 
 Neste projeto você vai trabalhar em um sistema de cadastro de clientes de um
