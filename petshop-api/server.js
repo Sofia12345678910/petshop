@@ -39,6 +39,11 @@ app.use('/api/clientes', clientesRouter);
 // Não esqueça de criar a tabela "servicos" em database.js antes!
 // -------------------------------------------------------------------------
 
+import servicosRouter from './routes/servicos.js';
+        app.use('/api/servicos', servicosRouter);
+
+
+
 app.listen(PORT, () => {
   console.log(`API do petshop rodando em http://localhost:${PORT}`);
 });
